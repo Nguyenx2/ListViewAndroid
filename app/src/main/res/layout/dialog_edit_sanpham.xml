@@ -46,6 +46,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
+                android:imeOptions="actionDone"
                 android:text="Name" />
         </LinearLayout>
 
@@ -78,13 +79,14 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/edtMoTaSP"
+            android:id="@+id/edtMoTa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="start|top"
+            android:imeOptions="actionDone"
             android:inputType="textMultiLine" />
 
     </LinearLayout>

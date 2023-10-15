@@ -123,21 +123,21 @@ public class SanPhamAdapter extends ArrayAdapter implements Filterable {
                 TextView tvMaSP = dialogView.findViewById(R.id.tvMaSP);
                 EditText edtTenSP = dialogView.findViewById(R.id.edtTenSP);
                 EditText edtGiaSP = dialogView.findViewById(R.id.edtGiaSP);
-                EditText edtMoTaSP = dialogView.findViewById(R.id.edtMoTaSP);
+                EditText edtMoTa = dialogView.findViewById(R.id.edtMoTa);
 
                 SanPham sp = listSanPham.get(position);
                 tvMaSP.setText("Mã sản phầm: " + sp.getMaSP());
                 edtTenSP.setText(sp.getTenSP());
                 edtGiaSP.setText(decimalFormat.format(sp.getGiaSP()));
-                edtMoTaSP.setText(sp.getDescription());
+                edtMoTa.setText(sp.getDescription());
 
                 builder.setPositiveButton("Lưu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String newTenSP = edtTenSP.getText().toString().trim();
-                        double newGiaSP = Double.parseDouble(edtGiaSP.getText().toString());
-                        String newMoTaSP = edtMoTaSP.getText().toString().trim();
-
+                        double newGiaSP = Double.parseDouble(edtGiaSP.getText().toString()
+                                .replace(",",""));
+                        String newMoTaSP = edtMoTa.getText().toString().trim();
                         sp.setTenSP(newTenSP);
                         sp.setGiaSP(newGiaSP);
                         sp.setDescription(newMoTaSP);

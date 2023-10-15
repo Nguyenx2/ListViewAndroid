@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 EditText edtMaSP = addView.findViewById(R.id.edtMaSP);
                 EditText edtTenSP = addView.findViewById(R.id.edtTenSP);
                 EditText edtGiaSP = addView.findViewById(R.id.edtGiaSP);
-                EditText edtDesc = addView.findViewById(R.id.edtMoTaSP);
+                EditText edtDesc = addView.findViewById(R.id.edtMoTa);
 
 
                 builder.setPositiveButton("Lưu", new DialogInterface.OnClickListener() {
